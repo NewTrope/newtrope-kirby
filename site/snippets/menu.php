@@ -1,22 +1,21 @@
-<nav role="navigation">
-
-  <ul class="menu cf">
-    <?php foreach($pages->visible() as $p): ?>
-    <li>
-      <a <?php e($p->isOpen(), ' class="active"') ?> href="<?php echo $p->url() ?>"><?php echo $p->title()->html() ?></a>
-
-      <?php if($p->hasVisibleChildren()): ?>
-      <ul class="submenu">
-        <?php foreach($p->children()->visible() as $p): ?>
-        <li>
-          <a href="<?php echo $p->url() ?>"><?php echo $p->title()->html() ?></a>
-        </li>
-        <?php endforeach ?>
+<nav class="navbar navbar-inverse navbar-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">NewTrope.</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Accueil</a></li>
+        <li><a href="#about">Portfolio</a></li>
+        <li><a href="#contact">Équipe</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-      <?php endif ?>
-
-    </li>
-    <?php endforeach ?>
-  </ul>
-
+    </div><!--/.nav-collapse -->
+  </div>
 </nav>

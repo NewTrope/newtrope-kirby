@@ -1,12 +1,15 @@
 <?php snippet('header') ?>
 
-  <main class="main" role="main">
-
-    <div class="text">
-      <h1><?php echo $page->title()->html() ?></h1>
-      <?php echo $page->text()->kirbytext() ?>
+  <div class="row">
+    <div class="col-md-2">
+      <?php snippet('menu') ?>
     </div>
+    <div class="col-md-4">
+      <article class="pageContent">
+        <?php echo $page->text()->kirbytext() ?>
+      </article>
+    </div>
+  </div>
 
-  </main>
 
 <?php snippet('footer') ?>

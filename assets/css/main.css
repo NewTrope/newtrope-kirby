@@ -1,0 +1,59 @@
+/* Site
+-------------------------------------------------- */
+
+body {
+  background: #242424;
+  background: -moz-linear-gradient(left, #242424 0%, #2e2e2e 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #242424), color-stop(100%, #2e2e2e));
+  background: -webkit-linear-gradient(left, #242424 0%, #2e2e2e 100%);
+  background: -o-linear-gradient(left, #242424 0%, #2e2e2e 100%);
+  background: -ms-linear-gradient(left, #242424 0%, #2e2e2e 100%);
+  background: linear-gradient(to right, #242424 0%, #2e2e2e 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242424', endColorstr='#2e2e2e', GradientType=1 );
+  color: #e0e0e0;
+}
+
+/* Menu
+-------------------------------------------------- */
+
+.navbar-top {
+    margin-bottom: 0;
+}
+
+/* Home
+-------------------------------------------------- */
+
+.video {
+  margin: 0 !important;
+}
+
+.quote {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.linkCompetences {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.linkCompetences ul li {
+  display: inline;
+}
+
+.linkCompetences a {
+  padding: 40px;
+}
+
+.linkCompetences img {
+  width: 30px;
+}
+
+.competences {
+  border-top: 1px solid #737373;
+  border-bottom: 1px solid #737373;
+  background-color: #2D3239;
+  -webkit-box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.7);
+  -moz-box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.7);
+  box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.7);
+}

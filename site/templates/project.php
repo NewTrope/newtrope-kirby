@@ -1,33 +1,27 @@
 <?php snippet('header') ?>
 
-  <main class="main" role="main">
-
-    <h1><?php echo $page->title()->html() ?></h1>
-
-    <ul class="meta cf">
-      <li><b>Year:</b> <time><?php echo $page->year() ?></time></li>
-      <li><b>Tags:</b> <?php echo $page->tags() ?></li>
-    </ul>
-
-    <div class="text">
-      <?php echo $page->text()->kirbytext() ?>
-
-      <?php foreach($page->images()->sortBy('sort', 'asc') as $image): ?>
-      <figure>
-        <img src="<?php echo $image->url() ?>" alt="<?php echo $page->title()->html() ?>">
-      </figure>
-      <?php endforeach ?>
+  <div class="row">
+    <div class="col-md-2">
+      <?php snippet('menu') ?>
     </div>
+    <div class="col-md-7">
+      <article class="portfolioContent">
+        <?php foreach($page->images()->sortBy('sort', 'asc') as $image): ?>
+          <figure>
+            <img src="<?php echo $image->url() ?>" alt="<?php echo $page->title()->html() ?>" class="img-responsive">
+          </figure>
+        <?php endforeach ?>
+      </article>
+    </div>
+    <div class="col-md-3">
+      <article class="portfolioInfos">
+        <p class="projectTitle"><?php echo $page->title() ?></p>
+        <p class="projectYear"><?php echo $page->year() ?></p>
+        <div class="projectText"><?php echo $page->text()->kirbytext() ?></div>
+        <p class="projectTags"><?php echo $page->tags() ?></p>
+      </article>
+    </div>
+  </div>
 
-    <nav class="nextprev cf" role="navigation">
-      <?php if($prev = $page->prevVisible()): ?>
-      <a class="prev" href="<?php echo $prev->url() ?>">&larr; previous</a>
-      <?php endif ?>
-      <?php if($next = $page->nextVisible()): ?>
-      <a class="next" href="<?php echo $next->url() ?>">next &rarr;</a>
-      <?php endif ?>
-    </nav>
-
-  </main>
 
 <?php snippet('footer') ?>

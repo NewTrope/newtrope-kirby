@@ -1,22 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+  <!DOCTYPE html>
+  <html lang="fr">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="<?php echo $site->description()->html() ?>">
+      <meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 
-  <title><?php echo $site->title()->html() ?> | <?php echo $page->title()->html() ?></title>
-  <meta name="description" content="<?php echo $site->description()->html() ?>">
-  <meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
+      <title><?php echo $site->title()->html() ?> | <?php echo $page->title()->html() ?></title>
 
-  <?php echo css('assets/css/main.css') ?>
+      <!-- Bootstrap core CSS -->
+      <?php echo css('assets/css/bootstrap.min.css') ?>
+      <?php echo css('assets/css/main.css') ?>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
-</head>
-<body>
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
 
-  <header class="header cf" role="banner">
-    <a class="logo" href="<?php echo url() ?>">
-      <img src="<?php echo url('assets/images/logo.svg') ?>" alt="<?php echo $site->title()->html() ?>" />
-    </a>
-    <?php snippet('menu') ?>
-  </header>
+    </head>
+    <body>

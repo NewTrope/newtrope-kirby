@@ -4,6 +4,9 @@ fields:
   title:
     label: Title
     type:  text
+  catch:
+    label: Accroche
+    type:  text
   text:
     label: Text
     type:  textarea
