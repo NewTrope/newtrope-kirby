@@ -21,5 +21,18 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
+
+      <script type="text/javascript">
+      var jumboHeight = $('.jumbotron').outerHeight();
+      function parallax(){
+          var scrolled = $(window).scrollTop();
+          $('.bg').css('height', (jumboHeight-scrolled) + 'px');
+      }
+
+      $(window).scroll(function(e){
+          parallax();
+      });
+      </script>
+
     </head>
     <body>

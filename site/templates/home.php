@@ -16,7 +16,7 @@
   </div>
 </div><!-- /.container -->
 
-<div class="jumbotron custom-background">
+<div class="jumbotron custom-background" style="background-image:url(<?php if($image = $page->image('cover.jpg')) { echo $image->url(); } ?>);">
   <div class="container presentation">
     <div class="row">
       <p>&nbsp;</p>
@@ -38,12 +38,11 @@
         <h3>Conception</h3>
       </div>
       <div class="col-md-2">
-        <img src="<?php echo url('assets/images/icons/image.svg') ?>" />
-        <h3>Image</h3>
+        <img src="<?php echo url('assets/images/icons/competences.svg') ?>" class="center-icon" />
       </div>
       <div class="col-md-2">
-        <img src="<?php echo url('assets/images/icons/son.svg') ?>" />
-        <h3>Son</h3>
+        <img src="<?php echo url('assets/images/icons/image.svg') ?>" />
+        <h3>Technique</h3>
       </div>
       <div class="col-md-2">
         <img src="<?php echo url('assets/images/icons/suivi.svg') ?>" />

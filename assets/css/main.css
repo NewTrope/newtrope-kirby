@@ -78,13 +78,18 @@ nav.menu li a:hover {
 /* Competences */
 
 .competences {
-  margin-top: -50px;
+  margin-top: -60px;
 }
 
 .competences img {
   display: block;
   margin: 0 auto;
-  width: 40px;
+  width: 60px;
+}
+
+.competences img.center-icon {
+  margin-top: -10px;
+  width: 80px;
 }
 
 .competences h3 {
@@ -193,8 +198,6 @@ article {
 -------------------------------------------------- */
 
 .custom-background {
-  border-top: 1px solid #737373;
-  border-bottom: 1px solid #737373;
   background-size: cover;
   background-position:top center;
   background-color: #2D3239;
