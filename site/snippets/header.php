@@ -7,7 +7,7 @@
       <meta name="description" content="<?php echo $site->description()->html() ?>">
       <meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
 
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 
       <title><?php echo $site->title()->html() ?> | <?php echo $page->title()->html() ?></title>
 
@@ -21,6 +21,5 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
-
     </head>
     <body>

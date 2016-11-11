@@ -1,3 +1,11 @@
+<div class="container">
+  <div class="footer">
+    <p>© NewTrope. 2016</p>
+    <p><a href="#">Mentions légales</a></p>
+  </div>
+</div><!-- /.container -->
+
+
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->

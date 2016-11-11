@@ -3,43 +3,96 @@
 <?php snippet('menu') ?>
 
 <div class="jumbotron video">
-  <div class="container">
-    <div class="row">
-      <a href="#"><img src="<?php echo url('assets/images/video.jpg') ?>" class="img-responsive"/></a>
-    </div>
+  <div class="container-fluid">
+      <video muted autoplay>
+        <source src="<?php if($video = $page->file('video.mov')) { echo $video->url(); } ?>" type="video/mp4">
+      </video>
   </div>
 </div>
 
 <div class="container">
   <div class="quote">
-    <h1>Cette phrase va vous accrocher</h1>
-  </div>
-  <div class="linkCompetences">
-    <ul>
-      <li><a href="#"><img src="<?php echo url('assets/images/icons/camera.svg') ?>"/></a></li>
-      <li><a href="#"><img src="<?php echo url('assets/images/icons/video.svg') ?>"/></a></li>
-      <li><a href="#"><img src="<?php echo url('assets/images/icons/user.svg') ?>"/></a></li>
-    </ul>
+    <p><?php echo $page->catch() ?></p>
   </div>
 </div><!-- /.container -->
 
-<div class="jumbotron competences">
-  <div class="container">
+<div class="jumbotron custom-background">
+  <div class="container presentation">
     <div class="row">
-      <div class="col-md-4">
-        <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
-        <div class='embed-container'><iframe src='https://player.vimeo.com/video/175421087' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
-      </div>
-      <div class="col-md-4">
-        <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
-        <div class='embed-container'><iframe src='https://player.vimeo.com/video/169263440' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
-      </div>
-      <div class="col-md-4">
-        <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
-        <div class='embed-container'><iframe src='https://player.vimeo.com/video/176266905' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
-      </div>
+      <p>&nbsp;</p>
+      <?php echo $page->presentation()->kirbytext() ?>
+      <p>&nbsp;</p>
     </div>
   </div>
 </div>
+
+<div class="container">
+  <div class="competences">
+    <div class="row">
+      <div class="col-md-2 col-md-offset-1">
+        <img src="<?php echo url('assets/images/icons/conseil.svg') ?>" />
+        <h3>Conseil</h3>
+      </div>
+      <div class="col-md-2">
+        <img src="<?php echo url('assets/images/icons/conception.svg') ?>" />
+        <h3>Conception</h3>
+      </div>
+      <div class="col-md-2">
+        <img src="<?php echo url('assets/images/icons/image.svg') ?>" />
+        <h3>Image</h3>
+      </div>
+      <div class="col-md-2">
+        <img src="<?php echo url('assets/images/icons/son.svg') ?>" />
+        <h3>Son</h3>
+      </div>
+      <div class="col-md-2">
+        <img src="<?php echo url('assets/images/icons/suivi.svg') ?>" />
+        <h3>Suivi</h3>
+      </div>
+    </div>
+    <div class="row">
+      <p>Forte d’un large panel de compétences créatives et stratégiques, la team NewTrope saura en tirer le meilleur pour vous offrir un regard innovant et proposer la solution la plus efficace pour le développement de votre entreprise.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="members">
+      <div class="col-md-3 col-xs-6">
+        <img src="<?php echo url('assets/images/david.jpg') ?>" />
+        <h3>David</h3>
+        <p>À la réa</p>
+        <p>Après des études en Lettres et en Sociologie ainsi qu’une dizaine d’année de théâtre, David se lance dans la réalisation en solo puis chez <em>Paris Brest</em> et <em>Zadig Production</em>. Il s'achète alors une belle pelle, creuse et pose enfin les fondations de NewTrope pour les besoins d’un court-métrage en 2014.</p>
+      </div>
+      <div class="col-md-3 col-xs-6">
+        <img src="<?php echo url('assets/images/jocelyn.jpg') ?>" />
+        <h3>Jocelyn</h3>
+        <p>À la technique</p>
+        <p>Artiste photographe et passionné de voyages, Jocelyn crapahute la pampa californienne. Il en ramène un reportage photographique qui lui vaudra d’être nommé membre d’honneur de WWOOF France. Suite à sa rencontre avec David et des projets communs, il se forme à la vidéo et devient chef opérateur.</p>
+      </div>
+      <div class="col-md-3 col-xs-6">
+        <img src="<?php echo url('assets/images/luca.jpg') ?>" />
+        <h3>Luca</h3>
+        <p>À l'image</p>
+        <p>Passionné d’informatique et suite à des études scientifiques, Luca se rend compte que la vidéo, c'est bien plus rigolo et s'en retourne à son envie première, l’image. Après un cursus aux Beaux-Arts et plusieurs projets vidéo personnels où il apprend à se servir du matériel cinéma, Luca intègre NewTrope en 2016.</p>
+      </div>
+      <div class="col-md-3 col-xs-6">
+        <img src="<?php echo url('assets/images/jerem.jpg') ?>" />
+        <h3>Jeremy</h3>
+        <p>À la prod</p>
+        <p>De formation théâtrale et littéraire, Jérémy entreprend une carrière commerciale qui le fera voyager à travers le pays, puis l’Angleterre jusqu’à New York. À son retour en France, gastronomiquement rétabli et fort de son expérience dans l’évènementiel et la communication il rejoint l’équipe en 2016.</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="next">
+      <p>Interessé ? Voyez la suite !</p>
+      <p><a href="<?php echo url('l-agence') ?>" class="button">Suivez le chemin</a></p>
+      </p>
+    </div>
+  </div>
+</div>
+
 
 <?php snippet('footer') ?>

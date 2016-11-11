@@ -7,6 +7,6 @@ fields:
   catch:
     label: Accroche
     type:  text
-  text:
-    label: Text
+  presentation:
+    label: Présentation
     type:  textarea
